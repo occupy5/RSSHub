@@ -4,6 +4,46 @@ pageClass: routes
 
 # 其他
 
+<<<<<<< HEAD
+=======
+## 12306
+
+### 最新动态
+
+<Route author="LogicJake" example="/12306/zxdt" path="/12306/zxdt/:id?" :paramsDesc="['铁路局id，可在 URL 中找到，不填默认显示所有铁路局动态']"/>
+
+## 36kr
+
+### 搜索文章
+
+<Route author="xyqfer" example="/36kr/search/article/8%E7%82%B91%E6%B0%AA" path="/36kr/search/article/:keyword" :paramsDesc="['关键字']" />
+
+## 汇通网
+
+### 7x24 小时快讯
+
+<Route author="occupy5" example="/fx678/kx" path="/fx678/kx" />
+
+## 99% Invisible
+
+### Transcript
+
+<Route author="Ji4n1ng" example="/99percentinvisible/transcript" path="/99percentinvisible/transcript"/>
+
+## 9To5
+
+### 9To5 分站
+
+<Route author="HenryQW" example="/9to5/mac" path="/9to5/:type" :paramsDesc="['分站名字']">
+
+支持分站：
+| Mac | Google | Toys |
+| --- | ------ | ---- |
+| Mac | Google | Toys |
+
+</Route>
+
+>>>>>>> fix link bug and add docs keywords
 ## Apple
 
 ### 更换和维修扩展计划
