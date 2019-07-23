@@ -4,23 +4,11 @@ pageClass: routes
 
 # 其他
 
-## 12306
-
-### 最新动态
-
-<Route author="LogicJake" example="/12306/zxdt" path="/12306/zxdt/:id?" :paramsDesc="['铁路局id，可在 URL 中找到，不填默认显示所有铁路局动态']"/>
-
 ## 36kr
 
 ### 搜索文章
 
-<Route author="xyqfer" example="/36kr/search/article/8%E7%82%B91%E6%B0%AA" path="/36kr/search/article/:keyword" :paramsDesc="['关键字']" />
-
-## 汇通网
-
-### 7x24 小时快讯
-
-<Route author="occupy5" example="/fx678/kx" path="/fx678/kx" />
+<Route author="xyqfer kt286" example="/36kr/search/article/ofo" path="/36kr/search/article/:keyword" :paramsDesc="['关键字']" />
 
 ## 99% Invisible
 
@@ -51,6 +39,12 @@ pageClass: routes
 
 见 [#app-store-mac-app-store](/program-update.html#app-store-mac-app-store)
 
+## archdaily
+
+### 首页
+
+<Route author="kt286" example="/archdaily" path="/archdaily"/>
+
 ## AutoTrader
 
 ### 搜索结果
@@ -61,6 +55,12 @@ pageClass: routes
 1. 复制查询结果 URL 中`?`后的部分，例如 `https://www.autotrader.co.uk/car-search?radius=50&postcode=sw1a1aa&onesearchad=Used&onesearchad=Nearly%20New&onesearchad=New&price-to=9000&year-from=2012&body-type=Hatchback&transmission=Automatic&exclude-writeoff-categories=on` 则为 `radius=50&postcode=sw1a1aa&onesearchad=Used&onesearchad=Nearly%20New&onesearchad=New&price-to=9000&year-from=2012&body-type=Hatchback&transmission=Automatic&exclude-writeoff-categories=on`
 
 </Route>
+
+## BOF
+
+### 首页
+
+<Route author="kt286" example="/bof/home" path="/bof/home" />
 
 ## checkee.info
 
@@ -102,6 +102,14 @@ pageClass: routes
 
 1. 简单模式, 例如「data visualization」, <https://rsshub.app/google/scholar/data+visualization>.
 2. 高级模式, 前往 [Google Scholar](https://scholar.google.com/schhp?hl=zh-cn&as_sdt=0,5), 点击左上角, 选择高级搜索并提交查询. 此时 URL 应为: <https://scholar.google.com/scholar?as_q=data+visualization&as_epq=&as_oq=&as_eq=&as_occt=any&as_sauthors=&as_publication=&as_ylo=2018&as_yhi=&hl=zh-CN&as_sdt=0%2C5>, 复制`https://scholar.google.com/scholar?`后的所有语句作为本路由的查询参数. 例子所对应的完整路由为<https://rsshub.app/google/scholar/as_q=data+visualization&as_epq=&as_oq=&as_eq=&as_occt=any&as_sauthors=&as_publication=&as_ylo=2018&as_yhi=&hl=zh-CN&as_sdt=0%2C5>.
+
+</Route>
+
+### 谷歌学术作者引用更新
+
+<Route author="KellyHwong" example="/google/citations/mlmE4JMAAAAJ" path="/google/citations/:id" crawlerBadge="1">
+
+路由中的参数 id，即用户谷歌学术引用页面 url 中的 id，如 https://scholar.google.com/citations?hl=zh-CN&user=mlmE4JMAAAAJ 中 user= 后的 mlmE4JMAAAAJ。
 
 </Route>
 
@@ -177,6 +185,12 @@ pageClass: routes
 
 <Route author="brilon" example="/mobdata/report" path="/mobdata/report"/>
 
+## NBA
+
+### 头条新闻
+
+<Route author="alizeegod" example="/nba/app_news" path="/nba/app_news"/>
+
 ## ONE · 一个
 
 ### 图片文字问答
@@ -195,6 +209,12 @@ pageClass: routes
 
 </Route>
 
+## sixthtone
+
+### 最新文章
+
+<Route author="kt286" example="/sixthtone/news" path="/sixthtone/news"/>
+
 ## The Verge
 
 ### The Verge
@@ -204,6 +224,12 @@ pageClass: routes
 通过提取文章全文, 以提供比官方源更佳的阅读体验.
 
 </Route>
+
+## TOPYS
+
+### 分类
+
+<Route author="kt286" example="/topys/7" path="/topys/:category" :paramsDesc="['分类ID，可在对应页面的 URL 中找到']"/>
 
 ## TSSstatus（iOS 降级通道）
 
@@ -250,6 +276,29 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="LogicJake" example="/zaker/source/12291" path="/zaker/source/:id" :paramsDesc="['source id，可在 URL 中找到']"/>
 
+### channel
+
+<Route author="kt286" example="/zaker/channel/13" path="/zaker/source/:id" :paramsDesc="['channel id，可在 URL 中找到']"/>
+
+## 爱发电
+
+### 发现用户
+
+<Route author="sanmmm" example="/afdian/explore/hot/所有" path="/afdian/explore/:type/:category?" :paramsDesc="['分类', '目录类型, 默认为 `所有`']">
+分类
+
+| 最新 | 推荐 | 最热 |
+| ---- | ---- | ---- |
+| new  | rec  | hot  |
+
+目录类型
+
+| 所有 | 绘画 | 视频 | 写作 | 游戏 | 音乐 | 播客 | 摄影 | 技术 | Vtuber | 舞蹈 | 体育 | 旅游 | 美食 | 时尚 | 数码 | 动画 | 其他 |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ------ | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| 所有 | 绘画 | 视频 | 写作 | 游戏 | 音乐 | 播客 | 摄影 | 技术 | Vtuber | 舞蹈 | 体育 | 旅游 | 美食 | 时尚 | 数码 | 动画 | 其他 |
+
+</Route>
+
 ## 爱范儿 ifanr
 
 ### 爱范儿频道
@@ -270,6 +319,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 产业研究报告
 
 <Route author="brilon" example="/iresearch/report" path="/iresearch/report"/>
+
+## 巴比特
+
+### 作者专栏
+
+<Route author="kt286" example="/8btc/45703" path="/8btc/:authorid" :paramsDesc="['作者ID，可在对应专辑页面的 URL 中找到']"/>
 
 ## 百度
 
@@ -305,12 +360,6 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="fengkx" example="/maitta" path="/maitta" supportPodcast="1" />
 
-## 博客: 敬维
-
-### 博客: 敬维
-
-<Route author="a180285" example="/blogs/jingwei.link" path="/blogs/jingwei.link"/>
-
 ## 财新博客
 
 ### 用户博客
@@ -342,6 +391,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 标签
 
 <Route author="LogicJake" example="/cyzone/label/创业邦周报" path="/cyzone/label/:name" :paramsDesc="['标签名称']"/>
+
+## 大侠阿木
+
+### 首页
+
+<Route author="kt286" example="/daxiaamu/home" path="/daxiaamu/home"/>
 
 ## 大众点评
 
@@ -418,6 +473,16 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="junfengP" example="/metred/fuli" path="/metred/fuli" />
 
+## 个人博客
+
+### 敬维
+
+<Route author="a180285" example="/blogs/jingwei.link" path="/blogs/jingwei.link"/>
+
+### 王垠-当然我在扯淡
+
+<Route author="junbaor" example="/blogs/wangyin" path="/blogs/wangyin"/>
+
 ## 古诗文网
 
 ### 首页推荐
@@ -476,6 +541,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="HenryQW" example="/huxiu/author/29318" path="/huxiu/author/:id" :paramsDesc="['用户 id']" />
 
+## 汇通网
+
+### 7x24 小时快讯
+
+<Route author="occupy5" example="/fx678/kx" path="/fx678/kx" />
+
 ## 惠誉评级
 
 ### 板块信息
@@ -486,11 +557,11 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 ### 分类
 
-<Route author="MoguCloud" example="/gcores/category/1" path="/gcores/category/:category" :paramsDesc="['分类名']">
+<Route author="MoguCloud" example="/gcores/category/news" path="/gcores/category/:category" :paramsDesc="['分类名']">
 
-| 文章 | 新闻 | 电台 |
-| ---- | ---- | ---- |
-| 1    | 2    | 9    |
+| 资讯 | 视频   | 电台   | 文章     |
+| ---- | ------ | ------ | -------- |
+| news | videos | radios | articles |
 
 </Route>
 
@@ -511,6 +582,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 首页
 
 <Route author="LogicJake" example="/whalegogo/home" path="/whalegogo/home"/>
+
+## 巨潮资讯
+
+### 公司公告
+
+<Route author="LogicJake" example="/cninfo/stock_announcement/000410" path="/cninfo/stock_announcement/:code" :paramsDesc="['股票代码']"/>
 
 ## 决胜网
 
@@ -563,6 +640,18 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 马良行
 
 <Route author="junfengP" example="/mlhang" path="/mlhang" />
+
+## 镁客网 im2maker
+
+### 镁客网频道
+
+<Route author="jin12180000" example="/im2maker/" path="/im2maker/:channel?" :paramsDesc="['默认不填为 最新文章 ，频道如下']">
+
+| 最新文章 | 行业快讯 | 行业观察 | 镁客请讲 | 硬科技 100 人 | 投融界   | 万象       |
+| -------- | -------- | -------- | -------- | ------------- | -------- | ---------- |
+| 默认空   | fresh    | industry | talk     | intech        | investor | everything |
+
+</Route>
 
 ## 每日安全
 
@@ -787,6 +876,20 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="Qixingchen" example="/tucaoqq/post/28564/CdRI0728" path="/tucaoqq/post/:project/:key" :paramsDesc="['产品 ID', '产品密钥']"/>
 
+## 天津产权交易中心
+
+### 产权转让
+
+<Route author="kt286" example="/tprtc/cqzr" path="/tprtc/cqzr"/>
+
+### 企业资产转让
+
+<Route author="kt286" example="/tprtc/qyzc" path="/tprtc/qyzc"/>
+
+### 新闻动态
+
+<Route author="kt286" example="/tprtc/news" path="/tprtc/news"/>
+
 ## 推酷
 
 ### 周刊
@@ -836,6 +939,16 @@ type 为 all 时，category 参数不支持 cost 和 free
 | hot      | pop         | week         | rising   | monthhonor |
 
 </Route>
+
+## 香水时代
+
+### 首页
+
+<Route author="kt286" example="/nosetime/home" path="/nosetime/home"/>
+
+### 香评
+
+<Route author="kt286" example="/nosetime/59247733/discuss/new" path="/nosetime/:id/:type/:sort?" :paramsDesc="['用户id，可在用户主页 URL 中找到', '类型，short 一句话香评  discuss 香评', '排序， new 最新  agree 最有用']"/>
 
 ## 新浪专栏
 

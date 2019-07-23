@@ -39,6 +39,14 @@ describe('filter', () => {
         expect(parsed.items[1].title).toBe('Title5');
     });
 
+    it(`filter_time`, async () => {
+        const response = await request.get('/test/1?filter_time=25');
+        const parsed = await parser.parseString(response.text);
+        expect(parsed.items.length).toBe(2);
+        expect(parsed.items[0].title).toBe('Title1');
+        expect(parsed.items[1].title).toBe('Title2');
+    });
+
     it(`filterout`, async () => {
         const response = await request.get('/test/1?filterout=Description4|Title5');
         const parsed = await parser.parseString(response.text);
@@ -108,5 +116,22 @@ describe('empty', () => {
         expect(response2.status).toBe(200);
         const parsed = await parser.parseString(response2.text);
         expect(parsed.items.length).toBe(0);
+    });
+});
+
+describe('allow_empty', () => {
+    it(`allow_empty`, async () => {
+        const response = await request.get('/test/allow_empty');
+        expect(response.status).toBe(200);
+        const parsed = await parser.parseString(response.text);
+        expect(parsed.items.length).toBe(0);
+    });
+});
+
+describe('wrong_path', () => {
+    it(`wrong_path`, async () => {
+        const response = await request.get('/wrong');
+        expect(response.status).toBe(404);
+        expect(response.text).toMatch(/RSSHub 发生了一些意外: <pre>Error: wrong path/);
     });
 });

@@ -10,6 +10,10 @@ pageClass: routes
 
 <Route author="xyqfer" example="/westore/new" path="/westore/new"/>
 
+### 用户动态
+
+<Route author="sanmmm" example="/afdian/dynamic/@afdian" path="/afdian/dynamic/:uid?" :paramsDesc="['用户id, 用户动态页面url里可找到']"/>
+
 ## 多抓鱼
 
 ### 搜索结果
@@ -52,11 +56,11 @@ pageClass: routes
 
 ### 关键词
 
-<Route author="DIYgod" example="/smzdm/keyword/女装" path="/smzdm/keyword/:keyword" :paramsDesc="['你想订阅的关键词']"/>
+<Route author="DIYgod" example="/smzdm/keyword/女装" path="/smzdm/keyword/:keyword" :paramsDesc="['你想订阅的关键词']" radar="1"/>
 
 ### 排行榜
 
-<Route author="DIYgod" example="/smzdm/ranking/pinlei/11/3" path="/smzdm/ranking/:rank_type/:rank_id/:hour" :paramsDesc="['榜单类型','榜单ID','时间跨度']">
+<Route author="DIYgod" example="/smzdm/ranking/pinlei/11/3" path="/smzdm/ranking/:rank_type/:rank_id/:hour" :paramsDesc="['榜单类型','榜单ID','时间跨度']" radar="1">
 
 -   榜单类型
 
@@ -123,6 +127,10 @@ pageClass: routes
 | 0    | 111  | 109  | 110  | 113  | 114  | 115  | 112  | 116  |
 
 </Route>
+
+### 关键词
+
+<Route author="gaoliang" example="/dgtle/trade/search/ipad" path="/dgtle/trade/search/:keyword" :paramsDesc="['搜索关键词']"/>
 
 ## 淘宝众筹
 
