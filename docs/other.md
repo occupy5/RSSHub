@@ -5,6 +5,7 @@ pageClass: routes
 # 其他
 
 =======
+
 ## 12306
 
 ### 最新动态
@@ -17,11 +18,17 @@ pageClass: routes
 
 <Route author="xyqfer" example="/36kr/search/article/8%E7%82%B91%E6%B0%AA" path="/36kr/search/article/:keyword" :paramsDesc="['关键字']" />
 
-## 汇通网
+## 4399 论坛
 
-### 7x24 小时快讯
+### 4399 论坛
 
-<Route author="occupy5" example="/fx678/kx" path="/fx678/kx" />
+<Route author="DIYgod" example="/forum4399/mtag-83932" path="/forum4399/:mtag" :paramsDesc="['mtag,必选-论坛网址最后的mtag字段']" selfhost="1"/>
+::: warning 注意
+
+需要用户 cookie 值，详情见部署页面的配置模块。
+
+:::
+</Route>
 
 ## 99% Invisible
 
@@ -37,23 +44,12 @@ pageClass: routes
 
 支持分站：
 | Mac | Google | Toys |
-| --- | ------ | ---- |
+\| --- \| ------ \| ---- \|
 | Mac | Google | Toys |
 
 </Route>
 
 =======
-## 4399 论坛
-
-### 4399 论坛
-
-<Route author="DIYgod" example="/forum4399/mtag-83932" path="/forum4399/:mtag" :paramsDesc="['mtag,必选-论坛网址最后的mtag字段']" selfhost="1"/>
-::: warning 注意
-
-需要用户 cookie 值，详情见部署页面的配置模块。
-
-:::
-</Route>
 
 ## acwifi 路由器交流
 
@@ -473,6 +469,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 工作机会
 
 <Route author="lotosbin" example="/network360/jobs" path="/network360/jobs"/>
+
+## 汇通网
+
+### 7x24 小时快讯
+
+<Route author="occupy5" example="/fx678/kx" path="/fx678/kx" />
 
 ## 惠誉评级
 
